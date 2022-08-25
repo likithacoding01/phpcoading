@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>calender</title>
+
+</head>
+<body>
+<center>
+<h1>calender</h1><br>
+<form method="POST">
+<input type="number" placeholder="enter a first number" name="num1"><br><br>
+<select name="opt">
+<option value="none"> select operator </option>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+<option value="%">%</option>
+</select><br><br>
+<input type="number" placeholder="enter a second number" name="num2"><br><br>
+<input type="submit" value"cal" >
+</form>
+</center>
+</body>
+</html>
+<?php
+if($_POST){
+	$a=$_POST["num1"];
+	$b=$_POST["num2"];
+	$c=$_POST["opt"];
+	if($c=='+')
+	{
+		$d=$a+$b;
+		echo 'add is'.$d;
+	}
+	else if($c=='-')
+	{
+		$d=$a-$b;
+		echo'sub is'.$d;
+	}
+	else if($c=='*')
+	{
+		$d=$a*$b;
+		echo 'mul is'.$d;
+	}
+	else if($c=='/')
+	{
+		$d=$a/$b;
+		echo 'mod is'.$d;
+	}
+	else if($c=='%')
+	{
+		$d=$a%$b;
+		echo ' div is'.$d;
+	}
+	else
+		echo '<scrpit> alert("plz enter operator") ;</scrpit>';
+
+
+	}
+
+
+?>
