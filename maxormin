@@ -1,0 +1,36 @@
+<html>
+<head>
+<title> maximun </title>
+</head>
+<body>
+<center>
+<h1> find the max of three numbers</h1>
+<form method="POST">
+enter the first number:<br>
+<input type="number" name="num1"><br>
+enter the second number:<br>
+<input type="number" name="num2"><br>
+enter the third number:<br>
+<input type="number" name="num3"><br>
+<input type="submit" value="check"><br>
+</form>
+</center>
+</body
+</html>
+
+<?php
+if($_POST){
+	$a=$_POST["num1"];
+	$b=$_POST["num2"];
+	$c=$_POST["num3"];
+	if($a>$b && $a>$c)
+		echo'a is max number'.$a;
+	else{
+		if($b>$a && $b>$c)
+			echo'b is max'.$b;
+		else
+			echo'c is max'.$c;
+	}
+}
+
+
