@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> even or odd number</title>
+</head>
+<body>
+<center>
+<h1> check given number is even or odd</h1>
+<form method="post">
+
+<input type="number" placeholder="give a number" id="num" name="num"><br><br>
+<input type="submit" value="check">
+</form>
+</center>
+</body>
+</html>
+<?php
+if($_POST){
+   $a=$_POST['num'];
+if($a%2==0){
+   echo'even number';
+}
+else
+	{  echo'odd number';
+
+}
+}
+
+
+
+?>
